@@ -2,3 +2,4 @@ Flask
 scikit-learn
 pickle-mixin
 gunicorn
+flask-cors
