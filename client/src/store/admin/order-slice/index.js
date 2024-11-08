@@ -10,7 +10,7 @@ export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
     const response = await axios.get(
-      `http://localhost:5001/api/admin/orders/get`
+      `https://farm-backend-ouo1.onrender.com/api/admin/orders/get`
     );
 
     return response.data;
