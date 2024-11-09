@@ -44,7 +44,7 @@ export const logoutUser = createAsyncThunk(
 
   async () => {
     const response = await axios.post(
-      "https://farm-backend-ouo1.onrender.com/auth/logout",
+      "https://farm-backend-ouo1.onrender.com/api/auth/logout",
       {},
       {
         withCredentials: true,
