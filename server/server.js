@@ -31,17 +31,18 @@ const PORT = process.env.PORT || 5001;
 
 app.use(
   cors({
-    origin: "https://farm-connect-wi5a.onrender.com",
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
-    credentials: true,
-  })
+  origin: "https://farm-connect-wi5a.onrender.com",
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "Cache-Control",
+    "Expires",
+    "Pragma",
+  ],
+  credentials: true,
+})
+
 );
 
 app.use(cookieParser());
