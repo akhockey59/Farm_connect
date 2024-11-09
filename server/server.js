@@ -29,9 +29,8 @@ mongoose.connect('mongodb+srv://akhockey59:Sky1234@farming.qhcg9.mongodb.net/?re
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(
-  cors({
-  origin: "https://farm-connect-wi5a.onrender.com",
+const corsOptions = {
+  origin: process.env.CORS_ORIGIN || "http://localhost:5173",
   methods: ["GET", "POST", "DELETE", "PUT"],
   allowedHeaders: [
     "Content-Type",
@@ -41,10 +40,8 @@ app.use(
     "Pragma",
   ],
   credentials: true,
-})
-
-);
-
+};
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth", authRouter);
